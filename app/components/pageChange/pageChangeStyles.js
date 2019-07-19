@@ -22,21 +22,21 @@ const pageChangeStyles = css`
     right: 0;
     background: #c19e77;
     transform: translateX(-100%);
-    animation: forward 7.5s infinite forwards;
-    animation-duration: 5s;
+    animation: forward 5s infinite forwards;
+    animation-delay: 3s;
   }
 
   @keyframes forward {
-    0% {
+    0%,
+    50%,
+    100% {
       transform: translateX(-100%);
     }
-    25% {
+    10%,
+    40% {
       transform: translate(0, 0);
     }
-    50% {
-      transform: translate(100%, 0);
-    }
-    100% {
+    30% {
       transform: translate(100%, 0);
     }
   }

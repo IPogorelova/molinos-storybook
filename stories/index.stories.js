@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 import { Welcome } from './welcome.stories';
 import Button from '../app/components/Button';
 import PageChange from '../app/components/pageChange';
+import SmoothScroll from '../app/components/smoothScroll';
 
 storiesOf('Intro', module).add('Что это', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -23,4 +24,6 @@ storiesOf('Button', module)
     </Button>
   ));
 
-storiesOf('Анимации', module).add('Amprio preloader', () => <PageChange />);
+storiesOf('Анимации', module)
+  .add('Анимация перехода между страницами', () => <PageChange />)
+  .add('Плавный скроллинг', () => <SmoothScroll />);
